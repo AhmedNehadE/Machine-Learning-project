@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CNN COVID19 Prediction</title>
+</head>
+<body>
+  <div style="margin: 0 auto; max-width: 960px; padding: 15px;">
+    <div style="text-align: center;">
+      <h1 style="padding: 30px; font-weight: 600; font-size: 3.2em;">COVID19 PREDICTION</h1>
+    </div>
+    <div style="text-align: center;">
+      <form style="display: inline-block;" action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" style="margin-bottom: 10px;"><br>
+        <input type="submit" style="padding: 10px 20px; background-color: #5cb85c; border: none; color: white; border-radius: 5px;" value="Predict">
+      </form>
+    </div>
+    <div style="display: inline-block; width: 48%; margin-top: 30px; border: 1px solid #337ab7; border-radius: 5px; padding: 15px; box-sizing: border-box;">
+      <img src="{{ user_image }}" alt="User Image" style="width: 100%; height: auto;">
+    </div>
+    <div style="display: inline-block; width: 48%; margin-top: 30px; padding: 15px; box-sizing: border-box;">
+      <h4>The state is <mark style="background-color: #04aa6d; color: white; border-radius: 5px;">{{state}}</mark></h4>
+    </div>
+  </div>
+</body>
+</html>
